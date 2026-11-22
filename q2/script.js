@@ -5,7 +5,7 @@ const resultDisplay = document.getElementById("result");
 function checkInput() {
     const rawValue = userInput.value.trim();
 
-    if (rawValue === "") {
+    if (rawValue === "" || Number.isNaN(Number(rawValue))) {
         resultDisplay.textContent = "Please enter a valid number!";
         return;
     }
